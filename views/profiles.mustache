@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+          <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body class="container">
+        
+        <h1>Profiles: </h1>
+        <ol>
+                {{#profiles}}
+                <li>
+                        {{name}}
+                </li>        
+                {{/profiles}}
+        </ol>
+
+        <form action="/addprofile" method="POST">
+			First name:<br>
+  			<input type="text" name="name"  placeholder="Name">
+ 			 <br>
+                          Username:<br>
+  			<input type="text" name="username"  placeholder="Username"><br>
+ 			 Company:<br>
+  			<input type="text" name="company" placeholder="Company">
+  			<br>Languages:<br>
+                          <input type="text" name="languages" placeholder="Languages">
+                          <br>
+  			<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
